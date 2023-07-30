@@ -6,5 +6,20 @@
  * @returns {Array}
  */
 export const reverse = (array) => {
-  throw new Error(`put your solution here ${array}`);
+  // Solution 1: using Array.prototype.reverse()
+  // return array.reverse();
+  if (!Array.isArray(array)) {
+    return array;
+  }
+
+  const reversedArray = [];
+  for (let i = array.length -1; i >= 0; i--) {
+    reversedArray.push(reverse(array[i]));
+  }
+
+  return reversedArray;
+
 };
+const data = [1, 2, 3, 4, 5];
+const result = reverse(data);
+console.log(result);

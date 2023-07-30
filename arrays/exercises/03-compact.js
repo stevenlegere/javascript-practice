@@ -6,5 +6,5 @@
  * @returns {Array}
  */
 export const compact = (array) => {
-  throw new Error(`put your solution here ${array}`);
+  return array.filter(Boolean);
 };
