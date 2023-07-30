@@ -6,20 +6,19 @@
  * @returns {Array}
  */
 export const reverse = (array) => {
-  // Solution 1: using Array.prototype.reverse()
-  // return array.reverse();
   if (!Array.isArray(array)) {
     return array;
   }
 
   const reversedArray = [];
-  for (let i = array.length -1; i >= 0; i--) {
-    reversedArray.push(reverse(array[i]));
+  for (let i = array.length - 1; i >= 0; i--) {
+    const element = array[i];
+    reversedArray.push(Array.isArray(element) ? reverse(element.reverse()) : element);
   }
 
   return reversedArray;
-
 };
+
 const data = [1, 2, 3, 4, 5];
 const result = reverse(data);
 console.log(result);
