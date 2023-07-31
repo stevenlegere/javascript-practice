@@ -5,6 +5,10 @@
  * @param {Array} array - a deep array of pairs
  * @returns {Array}
  */
+
+
 export const fromPairs = (array) => {
-  throw new Error(`put your solution here ${array}`);
+  const object = Object.fromEntries(array);
+  return object;
 };
+console.log(fromPairs);
