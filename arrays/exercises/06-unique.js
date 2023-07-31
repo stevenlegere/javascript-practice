@@ -6,5 +6,12 @@
  * @returns {Array}
  */
 export const unique = (array) => {
-  throw new Error(`put your solution here ${array}`);
+  return [...new Set(array)];
 };
+
+const originalArray = [1, 2, 3, 1, 2];
+const resultArray = unique(originalArray);
+
+console.log(resultArray);
+console.log(originalArray === resultArray);
+

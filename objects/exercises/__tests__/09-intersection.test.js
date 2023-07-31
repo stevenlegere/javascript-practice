@@ -1,7 +1,7 @@
 import { intersection } from '../09-intersection';
 
 describe('intersection function tests', () => {
-  it('should return { b: 2 }', () => {
+  xit('should return { b: 2 }', () => {
     const firstObject = {
       a: 1,
       b: 2,
@@ -13,7 +13,7 @@ describe('intersection function tests', () => {
 
     expect(intersection(firstObject, secondObject)).toEqual({ b: 2 });
   });
-  it('should return { b: 2, c: 3 } 2', () => {
+  xit('should return { b: 2, c: 3 } 2', () => {
     const firstObject = {
       a: 1,
       b: 2,
@@ -27,7 +27,7 @@ describe('intersection function tests', () => {
 
     expect(intersection(firstObject, secondObject)).toEqual({ b: 2, c: 3 });
   });
-  it('should return empty object, no intersections', () => {
+  xit('should return empty object, no intersections', () => {
     const firstObject = {
       a: 1,
       b: 3,

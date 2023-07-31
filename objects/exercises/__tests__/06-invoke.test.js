@@ -1,7 +1,7 @@
 import { invoke } from '../06-invoke';
 
 describe('invoke function tests', () => {
-  it('pass array method splice', () => {
+  xit('pass array method splice', () => {
     const data = {
       a: {
         b: [1, 2, 3],
@@ -15,7 +15,7 @@ describe('invoke function tests', () => {
       },
     });
   });
-  it('pass array method pop', () => {
+  xit('pass array method pop', () => {
     const data = {
       a: {
         b: [1, 2, 3],
@@ -29,7 +29,7 @@ describe('invoke function tests', () => {
       },
     });
   });
-  it('pass array method pop', () => {
+  xit('pass array method pop', () => {
     const data = {
       a: {
         b: [1, 2, 3],

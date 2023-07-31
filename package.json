@@ -18,7 +18,8 @@
     ],
     "moduleFileExtensions": [
       "js",
-      "html"
+      "html",
+      "mjs"
     ]
   },
   "author": "",

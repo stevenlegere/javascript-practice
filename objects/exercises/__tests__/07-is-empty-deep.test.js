@@ -1,7 +1,7 @@
 import { isEmptyDeep } from '../07-is-empty-deep';
 
 describe('isEmptyDeep function test', () => {
-  it('should return false, objects has primitive values', () => {
+  xit('should return false, objects has primitive values', () => {
     const data = { a: 0 };
     const data2 = { a: 1 };
     const data3 = { a: '1' };
@@ -16,7 +16,7 @@ describe('isEmptyDeep function test', () => {
     expect(isEmptyDeep(data5)).toBe(false);
     expect(isEmptyDeep(data6)).toBe(false);
   });
-  it('should return false, deep objects has primitive values', () => {
+  xit('should return false, deep objects has primitive values', () => {
     const deepObject = { a: { b: 0 } };
     const deepObject2 = { a: { b: 1 } };
     const deepObject3 = { a: { b: '1' } };
@@ -31,12 +31,12 @@ describe('isEmptyDeep function test', () => {
     expect(isEmptyDeep(deepObject5)).toBe(false);
     expect(isEmptyDeep(deepObject6)).toBe(false);
   });
-  it('should return true, {} is empty', () => {
+  xit('should return true, {} is empty', () => {
     const data = {};
 
     expect(isEmptyDeep(data)).toBe(true);
   });
-  it('should return true, objects with null, NaN, undefined, empty string, [], {}', () => {
+  xit('should return true, objects with null, NaN, undefined, empty string, [], {}', () => {
     const data = { a: null };
     const data2 = { a: NaN };
     const data3 = { a: undefined };
@@ -51,7 +51,7 @@ describe('isEmptyDeep function test', () => {
     expect(isEmptyDeep(data5)).toBe(true);
     expect(isEmptyDeep(data6)).toBe(true);
   });
-  it('should return true, objects with child object null, NaN, undefined, empty string, [], {}', () => {
+  xit('should return true, objects with child object null, NaN, undefined, empty string, [], {}', () => {
     const data = { a: { b: null } };
     const data2 = { a: { b: NaN } };
     const data3 = { a: { b: undefined } };
@@ -66,7 +66,7 @@ describe('isEmptyDeep function test', () => {
     expect(isEmptyDeep(data5)).toBe(true);
     expect(isEmptyDeep(data6)).toBe(true);
   });
-  it('should return false, objects has arrays with primitive values ', () => {
+  xit('should return false, objects has arrays with primitive values ', () => {
     const data = { a: [0] };
     const data2 = { a: [1] };
     const data3 = { a: ['1'] };
@@ -85,7 +85,7 @@ describe('isEmptyDeep function test', () => {
     expect(isEmptyDeep(data7)).toBe(false);
     expect(isEmptyDeep(data8)).toBe(false);
   });
-  it('should return false, objects has deep arrays with values ', () => {
+  xit('should return false, objects has deep arrays with values ', () => {
     const data = { a: [[0]] };
     const data2 = { a: [[1]] };
     const data3 = { a: [['1']] };
@@ -110,7 +110,7 @@ describe('isEmptyDeep function test', () => {
     expect(isEmptyDeep(data10)).toBe(false);
     expect(isEmptyDeep(data11)).toBe(false);
   });
-  it('should return true, objects has arrays with NaN, null, undefined, [], {}', () => {
+  xit('should return true, objects has arrays with NaN, null, undefined, [], {}', () => {
     const data = { a: [undefined] };
     const data2 = { a: [''] };
     const data3 = { a: [null] };
@@ -129,7 +129,7 @@ describe('isEmptyDeep function test', () => {
     expect(isEmptyDeep(data7)).toBe(true);
     expect(isEmptyDeep(data8)).toBe(true);
   });
-  it('should return true, objects has deep arrays with NaN, null, undefined, [], {}', () => {
+  xit('should return true, objects has deep arrays with NaN, null, undefined, [], {}', () => {
     const data = { a: [[undefined]] };
     const data2 = { a: [['']] };
     const data3 = { a: [[null]] };

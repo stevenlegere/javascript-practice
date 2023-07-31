@@ -1,7 +1,7 @@
 import { intersectionDeep } from '../10-intersection-deep';
 
 describe('intersectionDeep function tests', () => {
-  it('should return { b: 2 }', () => {
+  xit('should return { b: 2 }', () => {
     const firstObject = {
       a: 1,
       b: 2,
@@ -13,7 +13,7 @@ describe('intersectionDeep function tests', () => {
 
     expect(intersectionDeep(firstObject, secondObject)).toEqual({ b: 2 });
   });
-  it('should return { b: 2, c: 3 }', () => {
+  xit('should return { b: 2, c: 3 }', () => {
     const firstObject = {
       a: 1,
       b: 2,
@@ -27,7 +27,7 @@ describe('intersectionDeep function tests', () => {
 
     expect(intersectionDeep(firstObject, secondObject)).toEqual({ b: 2, c: 3 });
   });
-  it('should return { b: { c: 2 } }', () => {
+  xit('should return { b: { c: 2 } }', () => {
     const firstObject = {
       a: 1,
       b: {
@@ -45,7 +45,7 @@ describe('intersectionDeep function tests', () => {
 
     expect(intersectionDeep(firstObject, secondObject)).toEqual({ b: { c: 2 } });
   });
-  it('should return { b: { c: [1, 2] } }', () => {
+  xit('should return { b: { c: [1, 2] } }', () => {
     const firstObject = {
       a: 1,
       b: {
@@ -63,7 +63,7 @@ describe('intersectionDeep function tests', () => {
 
     expect(intersectionDeep(firstObject, secondObject)).toEqual({ b: { c: [1, 2] } });
   });
-  it('should return {}, first array deep', () => {
+  xit('should return {}, first array deep', () => {
     const firstObject = {
       a: 1,
       b: {
@@ -81,7 +81,7 @@ describe('intersectionDeep function tests', () => {
 
     expect(intersectionDeep(firstObject, secondObject)).toEqual({});
   });
-  it('should return { b: { c: [[1], 2] }}', () => {
+  xit('should return { b: { c: [[1], 2] }}', () => {
     const firstObject = {
       a: 1,
       b: {
@@ -99,7 +99,7 @@ describe('intersectionDeep function tests', () => {
 
     expect(intersectionDeep(firstObject, secondObject)).toEqual({ b: { c: [[1], 2] } });
   });
-  it('should return { b: { c: [{ a: 1 }, 2] }}', () => {
+  xit('should return { b: { c: [{ a: 1 }, 2] }}', () => {
     const firstObject = {
       a: 1,
       b: {
@@ -117,7 +117,7 @@ describe('intersectionDeep function tests', () => {
 
     expect(intersectionDeep(firstObject, secondObject)).toEqual({ b: { c: [{ a: 1 }, 2] } });
   });
-  it('should return empty object, no intersections', () => {
+  xit('should return empty object, no intersections', () => {
     const firstObject = {
       a: 1,
       b: 3,

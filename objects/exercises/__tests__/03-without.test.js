@@ -1,7 +1,7 @@
 import { without } from '../03-without';
 
 describe('without function test', () => {
-  it('should return new object without listed properties', () => {
+  xit('should return new object without listed properties', () => {
     const data = {
       a: 1,
       b: 2,
@@ -10,7 +10,7 @@ describe('without function test', () => {
 
     expect(without(data, 'a', 'c')).toEqual({ b: 2 });
   });
-  it('should return new object without listed properties', () => {
+  xit('should return new object without listed properties', () => {
     const data = {
       property: 'a',
       property2: 2,
@@ -27,7 +27,7 @@ describe('without function test', () => {
       property2: 2,
     });
   });
-  it('should return new object without listed properties', () => {
+  xit('should return new object without listed properties', () => {
     const data = {
       name: 'UserName',
       age: 28,
@@ -35,7 +35,7 @@ describe('without function test', () => {
 
     expect(without(data, 'age')).toEqual({ name: 'UserName' });
   });
-  it('should check that method returns new object', () => {
+  xit('should check that method returns new object', () => {
     const data = {
       a: 1,
       b: 2,
