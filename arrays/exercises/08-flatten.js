@@ -6,5 +6,18 @@
  * @returns {Array}
  */
 export const flatten = (array) => {
-  throw new Error(`put your solution here ${array}`);
+  return array.reduce((acc, current) => {
+    if (Array.isArray(current)) {
+      acc.push(...flatten(current));
+    } else {
+      acc.push(current);
+    }
+    return acc;
+  }, []);
+
 };
+
+const array = [1, 2, [3, 4, [5]]];
+const plainArray = flatten(array);
+
+console.log(plainArray); // [1, 2, 3, 4, 5]

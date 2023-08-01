@@ -1,17 +1,17 @@
 import { chunk } from '../09-chunk';
 
 describe('chunk function tests', () => {
-  xit('should return an array with chunks sized by 2', () => {
+  it('should return an array with chunks sized by 2', () => {
     const data = [1, 2, 3, 4, 5];
 
     expect(chunk(data, 2)).toEqual([[1, 2], [3, 4], [5]]);
   });
-  xit('should return an array with chunks sized by 3', () => {
+  it('should return an array with chunks sized by 3', () => {
     const data = [1, 2, 3, 4, 5];
 
     expect(chunk(data, 3)).toEqual([[1, 2, 3], [4, 5]]);
   });
-  xit('should return a new chunked array', () => {
+  it('should return a new chunked array', () => {
     const data = [1, 2, 3, 4, 5];
 
     const result1 = chunk(data, 2);

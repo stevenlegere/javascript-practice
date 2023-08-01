@@ -7,5 +7,15 @@
  * @returns {Array}
  */
 export const chunk = (array, size) => {
-  throw new Error(`put your solution here ${array} ${size}`);
-};
+  const result = [];
+  for (let i = 0; i < array.length; i += size) {
+    result.push(array.slice(i, i + size));
+  }
+  return result;
+}; 
+
+const originalArray = [1, 2, 3, 4, 5];
+const size = 2;
+const resultArray = chunk(originalArray, size);
+
+console.log(resultArray); // [[1, 2], [3, 4], [5]]
