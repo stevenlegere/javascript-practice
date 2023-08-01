@@ -6,5 +6,13 @@
  * @returns {Array}
  */
 export const intersection = (...arrays) => {
-  throw new Error(`put your solution here ${arrays}`);
+  return arrays.reduce((acc, currentArray) => {
+    return acc.filter((value) => currentArray.includes(value));
+  });
 };
+
+const array1 = [1, 2];
+const array2 = [2, 3];
+const resultArray = intersection(array1, array2);
+
+console.log(resultArray); // [2]
