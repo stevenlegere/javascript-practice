@@ -5,6 +5,8 @@
  * @param element - element to verify
  * @returns {boolean}
  */
-export const isPlainObject = (element) => {
-  throw new Error(`put your solution here ${element}`);
-};
+export const isPlainObject = (arg) =>
+  typeof arg === 'object' && arg !== null && !Array.isArray(arg);
+
+  const result = isPlainObject({ a: 1 });
+  console.log(result); // true

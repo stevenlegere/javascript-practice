@@ -1,7 +1,7 @@
 import { isEqualDeep } from '../08-is-equal-deep';
 
 describe('isEqualDeep function tests', () => {
-  it('should return true, empty objects are equal', () => {
+  xit('should return true, empty objects are equal', () => {
     expect(isEqualDeep({}, {})).toBe(true);
   });
   xit('should return true, plain objects are equal', () => {

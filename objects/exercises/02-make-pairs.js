@@ -6,5 +6,8 @@
  * @returns {Array} - a deep array
  */
 export const makePairs = (object) => {
-  throw new Error(`put your solution here ${object}`);
+  return Object.entries(object);
 };
+
+const result = makePairs({ a: 1, b: 2 });
+console.log(result); // [['a', 1], ['b', 2]]

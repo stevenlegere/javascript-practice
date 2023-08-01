@@ -7,5 +7,12 @@
  * @returns {Object} - New object without listed values
  */
 export const without = (object, ...args) => {
-  throw new Error(`put your solution here ${object} ${args}`);
+  const newObject = Object.assign({}, object);
+  args.forEach((arg) => {
+    delete newObject[arg];
+  })
+  return newObject;
 };
+
+const result = without({ a: 1, b: 2 }, 'b');
+console.log(result); // { a: 1 }

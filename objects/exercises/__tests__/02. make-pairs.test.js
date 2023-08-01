@@ -1,7 +1,7 @@
 import { makePairs } from '../02-make-pairs';
 
 describe('makePairs function test', () => {
-  xit('should return deep array', () => {
+  it('should return deep array', () => {
     const data = {
       a: 1,
       b: 2,
@@ -10,7 +10,7 @@ describe('makePairs function test', () => {
 
     expect(makePairs(data)).toEqual([['a', 1], ['b', 2], ['c', [3, 4]]]);
   });
-  xit('should return deep array', () => {
+  it('should return deep array', () => {
     const data = {
       a: 1,
       b: undefined,
@@ -21,7 +21,7 @@ describe('makePairs function test', () => {
 
     expect(makePairs(data)).toEqual([['a', 1], ['b', undefined], ['c', { a: 1 }]]);
   });
-  xit('should return deep array', () => {
+  it('should return deep array', () => {
     const data = {
       a: null,
       b: NaN,
