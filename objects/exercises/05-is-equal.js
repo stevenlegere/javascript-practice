@@ -7,5 +7,29 @@
  * @returns {boolean}
  */
 export const isEqual = (firstObj, secondObj) => {
-  throw new Error(`put your solution here ${firstObj} ${secondObj}`);
+  if (typeof firstObj !== 'object' || firstObj === null || typeof secondObj !== 'object' || secondObj === null) {
+    return false;
+  }
+
+  const firstObjKeys = Object.keys(firstObj);
+  const secondObjKeys = Object.keys(secondObj);
+
+  if (firstObjKeys.length !== secondObjKeys.length) {
+    return false;
+  }
+
+  for (const key of firstObjKeys) {
+    if (!secondObj.hasOwnProperty(key) || firstObj[key] !== secondObj[key]) {
+      return false;
+    }
+  }
+
+  return true;
 };
+
+console.log(isEqual({ a: 1, b: 1 }, { a: 1, b: 1 })); // Output: true
+console.log(isEqual({ a: 1, b: 1 }, { a: 1, b: 2 })); // Output: false
+console.log(isEqual({ a: 1, b: 1 }, { a: 1, c: 1 })); // Output: false
+console.log(isEqual({ a: 1, b: 1 }, { a: 1, b: 1, c: 1 })); // Output: false
+console.log(isEqual({ a: 1, b: 1 }, { b: 1, a: 1 })); // Output: true (order doesn't matter)
+

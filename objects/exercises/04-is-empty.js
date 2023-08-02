@@ -21,3 +21,10 @@ export const isEmpty = (object) => {
     }
     return true;
   };
+
+console.log(isEmpty({})); // Output: true
+console.log(isEmpty({ a: undefined })); // Output: true
+console.log(isEmpty({ a: 1 })); // Output: false
+console.log(isEmpty({ b: null, c: '' })); // Output: true
+console.log(isEmpty({ d: NaN, e: 0 })); // Output: false
+
