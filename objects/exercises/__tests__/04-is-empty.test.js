@@ -1,7 +1,7 @@
 import { isEmpty } from '../04-is-empty';
 
 describe('isEmpty function test', () => {
-  xit('should return false, objects has primitive values', () => {
+  it('should return false, objects has primitive values', () => {
     const data = { a: 0 };
     const data2 = { a: 1 };
     const data3 = { a: '1' };
@@ -16,19 +16,19 @@ describe('isEmpty function test', () => {
     expect(isEmpty(data5)).toBe(false);
     expect(isEmpty(data6)).toBe(false);
   });
-  xit('should return true, {} is empty', () => {
+  it('should return true, {} is empty', () => {
     const data = {};
 
     expect(isEmpty(data)).toBe(true);
   });
-  xit('should return false, shallow check, so [] and {} counts as not empty', () => {
+  it('should return false, shallow check, so [] and {} counts as not empty', () => {
     const data = { a: {} };
     const data2 = { a: [] };
 
     expect(isEmpty(data)).toBe(false);
     expect(isEmpty(data2)).toBe(false);
   });
-  xit('should return true, objects with null, NaN, undefined, empty string, [], {}', () => {
+  it('should return true, objects with null, NaN, undefined, empty string, [], {}', () => {
     const data = { a: null };
     const data2 = { a: NaN };
     const data3 = { a: undefined };
